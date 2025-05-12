@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven 3.6'  // El nombre de la instalación de Maven que configuraste en Jenkins
+    }
+
     environment {
         REPO_URL = 'https://github.com/ivantica2127/demo_jenkins_api1.git'
         JAR_NAME = 'app.jar'
@@ -53,4 +57,3 @@ pipeline {
         }
     }
 }
-
